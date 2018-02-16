@@ -209,7 +209,8 @@ define([
                  * Moves a row
                  */
                 onMove: function () {
-                    pd.updateState('moveRow');
+                    // A little delay is sometimes needed for the DOM to be ready.
+                    setTimeout(function(){pd.updateState('moveRow');}, 200);
                 }
             });
 
@@ -654,7 +655,8 @@ define([
                  * Removes a column
                  */
                 onMove: function () {
-                    pd.updateState('moveCol');
+                    // A little delay is sometimes needed for the DOM to be ready.
+                    setTimeout(function(){pd.updateState('moveCol');}, 200);
                 }
             });
 
